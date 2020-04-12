@@ -9,7 +9,6 @@ resources:
 - repo: self
 
 variables:
-  tag: '$(Build.BuildId)'
   imageName: 'flaskAzureDevops-docker'
 
 stages:
@@ -26,8 +25,6 @@ stages:
       inputs:
         command: build
         dockerfile: '$(Build.SourcesDirectory)/app/Dockerfile'
-        tags: |
-          $(tag)
         repository: $(imageName)
     - task: Docker@2
       inputs:
