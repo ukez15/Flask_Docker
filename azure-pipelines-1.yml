@@ -23,6 +23,7 @@ stages:
     - task: Docker@2
       displayName: Build an image
       inputs:
+        containerRegistry: 'Dockerhubconnection'
         command: build
         dockerfile: '$(Build.SourcesDirectory)/app/Dockerfile'
         repository: $(imageName)
@@ -36,4 +37,6 @@ stages:
         containerRegistry:  'Dockerhubconnection'
         repository: $(imageName)
         command: 'push'
-
+        tags: |
+          test1
+          test2
