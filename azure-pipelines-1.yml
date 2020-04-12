@@ -37,6 +37,3 @@ stages:
         containerRegistry:  'Dockerhubconnection'
         repository: $(imageName)
         command: 'push'
-        tags: |
-          test1
-          test2
