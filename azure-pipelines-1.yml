@@ -29,9 +29,14 @@ stages:
         tags: |
           $(tag)
         repository: $(imageName)
-
     - task: Docker@2
       inputs:
         containerRegistry: 'Dockerhubconnection'
+        command: 'login'
+    - task: Docker@2
+      displayName: Push image
+      inputs:
+        containerRegistry:  'Dockerhubconnection'
         repository: $(imageName)
         command: 'push'
+
