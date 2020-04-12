@@ -37,6 +37,6 @@ stages:
       displayName: Push image
       inputs:
         containerRegistry:  'Dockerhubconnection'
-        repository: stevendev/$(imageName):$(tag)
+        repository: $(imageName):$(tag)
         command: 'push'
 
