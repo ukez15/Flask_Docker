@@ -10,7 +10,7 @@ resources:
 
 variables:
   tag: 'latest'
-  imageName: 'stevendev/pipelines-flask-docker'
+  imageName: 'mazihuk/pipelines-flask-docker'
   
 stages:
 - stage: Build
